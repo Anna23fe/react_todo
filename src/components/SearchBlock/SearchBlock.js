@@ -4,10 +4,10 @@ import './SearchBlock.css';
 
 const SearchBlock = () => {
 
-    const searchBlockText = 'What do u want to search';
+    const searchBlockText = 'What do u want to search?';
     return (
         <div className="search-block">
-        <input placeholder={searchBlockText}></input>
+        <input placeholder={searchBlockText}/>
         </div>
     )
 }

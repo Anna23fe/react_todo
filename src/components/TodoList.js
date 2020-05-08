@@ -1,22 +1,25 @@
-import Ract from 'react';
+import React from 'react';
 import './TodoList.css';
 import TodoListItem from './TodoListItem';
 
 
-
 const TodoList = ( {todoItems}) => {
     
-    const elements = todoItems.map((element) =>{
+    const elements = todoItems.map((element) => {
 
   const { id, ...otherProps } = element;
 
     return  (
-    <li ley ={id} className='list-group-item'>
-        <TodoListItem {...otherProps}/></li> };
+    <li key ={id} className='list-group-item'>
+        <TodoListItem {...otherProps}/>
+        </li> );
 });
-return (<ul className=''></ul>)
-      <ul> 
-     <li><TodoListItem 
+
+return (<ul className='list-group'>
+    {elements}
+</ul>);
+}
+  
 //       label= {todoItems[0].label} 
 //       important={todoItems[0].important} /></li>
 //        <li><TodoListItem 
